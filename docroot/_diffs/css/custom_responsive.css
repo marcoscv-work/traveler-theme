@@ -1,0 +1,92 @@
+@import "compass";
+@import "compass/css3/user-interface";
+@import "mixins";
+
+@include respond-to(phone, tablet) {
+	.aui {
+		body {
+			padding: 0;
+		}
+
+		#wrapper #banner {
+			min-height: 63px;
+
+			.row-fluid .span10 {
+				background: rgba(0, 0, 0, 0.6);
+				min-height: inherit;
+				position: relative;
+				width: 100%;
+			}
+
+			#navigation .navbar-inner {
+				background: rgba(0, 0, 0, 0.6);
+				left: 0;
+				padding: 2%;
+				position: fixed;
+				top: 0;
+				width: 96%;
+			}
+		}
+
+		.portlet-dockbar {
+			display: block;
+			width: inherit;
+		}
+
+		.navbar-static-top {
+			margin-top: 0;
+		}
+
+		.dockbar-split .dockbar, .aui .dockbar {
+			left: inherit;
+			margin: 0;
+			position: fixed;
+			right: 0;
+		}
+
+		a.logo.custom-logo.span2 img {
+			max-height: 45px;
+			padding: 9px;
+		}
+
+		.dockbar .nav li.dropdown.user-avatar .dropdown-menu {
+			left: 0;
+			right: inherit;
+		}
+
+		.circles {
+			.scroll-arrow.circle {
+				border-radius: 50%;
+				font-size: 14px;
+				height: 30px;
+				line-height: 28px;
+				margin: 4px;
+				width: 30px;
+
+				&:hover, &.selected {
+					height: 30px;
+				}
+			}
+		}
+
+		.controls-hidden, .controls-visible.signed-out {
+			overflow: hidden;
+
+			.portlet-boundary.floatleft {
+				float: left;
+				overflow: auto;
+				position: relative;
+			}
+
+			.scroll-arrow.arrow-right, .scroll-arrow.arrow-left {
+				height: 15%;
+				top: 45%;
+				width: 50px;
+			}
+
+			#_145_navAccountControlsNavbarBtn {
+				display: none;
+			}
+		}
+	}
+}

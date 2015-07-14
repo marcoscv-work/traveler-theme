@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+#parse ($init)
+
+<html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+	<title>$the_title - $company_name</title>
+
+	<meta content="initial-scale=1.0, width=device-width, user-scalable=no" name="viewport" />
+
+	$theme.include($top_head_include)
+</head>
+
+#set ($controls = $theme.getSetting("presentation-controls-always-visible"))
+#set ($cssTransition = $theme.getSetting("css-transition-effect"))
+#set ($duration = $theme.getSetting("transition-duration"))
+#set ($font = $theme.getSetting("font"))
+#set ($layoutAlert = $theme.getSetting("layout-alert"))
+#set ($navigationVisibility = $theme.getSetting("navigation-visibility"))
+#set ($progressBar = $theme.getSetting("progress-bar"))
+#set ($transition = $theme.getSetting("transition-effect"))
+
+#if ($cssTransition == "yes")
+	#set ($css_class = "${css_class} css-effect")
+#end
+
+#if ($controls == true)
+	#set ($css_class = "${css_class} controls-always-visible")
+#end
+
+#if ($font == "league-gothic")
+	#set ($css_class = "${css_class} league-gothic")
+#end
+
+#if ($font == "oswald")
+	#set ($css_class = "${css_class} oswald")
+#end
+
+#if ($layoutAlert == true)
+	#set ($layoutAlert = "layoutalert='true'")
+#else
+	#set ($layoutAlert = "layoutalert='false'")
+#end
+
+<body class="$css_class" transition="$transition" duration="$duration" $layoutAlert>
+
+<span class="loading">
+</span>
+
+$theme.include($body_top_include)
+
+#dockbar()
+
+<div id="wrapper">
+
+	#if ($navigationVisibility == true)
+		<header id="banner" role="banner">
+			<div class="navigation-menu toggle-menu pull-right">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+		</header>
+
+		#if ($has_navigation || $is_signed_in)
+			#parse ("$full_templates_path/navigation.vm")
+		#end
+	#end
+
+	<div id="content">
+		#if ($selectable)
+			$theme.include($content_include)
+		#else
+			$portletDisplay.recycle()
+
+			$portletDisplay.setTitle($the_title)
+
+			$theme.wrapPortlet("portlet.vm", $content_include)
+		#end
+	</div>
+</div>
+
+<a href="#" class="arrow-left scroll-arrow"></a>
+<a href="#" class="arrow-right scroll-arrow"></a>
+
+<div class="circles">
+	<span class="center"></div>
+</div>
+
+#if ($progressBar == true)
+	<div class="porcentBar"></div>
+#end
+
+$theme.include($body_bottom_include)
+
+$theme.include($bottom_include)
+
+</body>
+
+</html>

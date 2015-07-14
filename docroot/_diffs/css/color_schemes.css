@@ -1,0 +1,91 @@
+@import "compass";
+@import "compass/css3/user-interface";
+@import "mixins";
+
+.aui {
+	/* Classic Scheme */
+
+	.classic-radial {
+		background-repeat: no-repeat;
+
+		@include background-image(radial-gradient(center, circle cover, #E1E1E1 0%, #FFF 100%));
+	}
+
+	/* Dark Scheme */
+
+	.dark {
+		background: #000;
+		color: #FFF;
+
+		.lfr-admin-panel {
+			background: #000;
+			color: #EEE;
+
+			button.btn.close {
+				background: #FFF;
+				height: 18px;
+				line-height: 0;
+				opacity: 1;
+				padding: 3px;
+			}
+
+			.add-content-menu .lfr-page-template:hover {
+				color: #000;
+			}
+		}
+
+		.loading {
+			background: url(@theme_image_path@/color_schemes/dark/progress_bar/loading_animation.gif) no-repeat center center #000;
+		}
+
+		&.controls-hidden, &.controls-visible.signed-out {
+			.scroll-arrow.arrow-left {
+				background-image: url(@theme_image_path@/color_schemes/dark/arrows/left.png);
+			}
+
+			.scroll-arrow.arrow-right {
+				background-image: url(@theme_image_path@/color_schemes/dark/arrows/right.png);
+			}
+		}
+	}
+
+	/* Dark Radial Scheme */
+
+	.dark-radial {
+		background: #000;
+		color: #EEE;
+
+		.lfr-admin-panel {
+			background: #000;
+			color: #EEE;
+
+			button.btn.close {
+				background: #FFF;
+				height: 18px;
+				line-height: 0;
+				opacity: 1;
+				padding: 3px;
+			}
+
+			.add-content-menu .lfr-page-template:hover {
+				color: #000;
+			}
+		}
+
+		@include background-image(radial-gradient(center, circle cover, #555A5F 0%, #1C1E20 100%));
+
+		.loading {
+			background: url(@theme_image_path@/color_schemes/dark/progress_bar/loading_animation.gif) no-repeat center center #000;
+		}
+
+		&.controls-hidden, &.controls-visible.signed-out {
+			.scroll-arrow.arrow-left {
+				background-image: url(@theme_image_path@/color_schemes/dark/arrows/left.png);
+			}
+
+			.scroll-arrow.arrow-right {
+				background-image: url(@theme_image_path@/color_schemes/dark/arrows/right.png);
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE look-and-feel PUBLIC "-//Liferay//DTD Look and Feel 6.2.0//EN" "http://www.liferay.com/dtd/liferay-look-and-feel_6_2_0.dtd">
+
+<look-and-feel>
+	<compatibility>
+		<version>6.2.0+</version>
+	</compatibility>
+	<theme id="traveler" name="traveler theme">
+		<settings>
+			<setting configurable="true" key="portlet-setup-show-borders-default" type="checkbox" value="false" />
+			<setting configurable="true" key="navigation-visibility" type="checkbox" value="true" />
+			<setting configurable="true" key="presentation-controls-always-visible" type="checkbox" value="true" />
+			<setting configurable="true" key="progress-bar" type="checkbox" value="true" />
+			<setting configurable="true" key="layout-alert" type="checkbox" value="true" />
+			<setting configurable="true" key="font" type="select" options="normal,league-gothic,oswald" value="league-gothic" />
+			<setting configurable="true" key="transition-effect" type="select" options="backBoth,backIn,backOut,bounceBoth,bounceIn,bounceOut,easeBoth,easeBothStrong,easeIn,easeInStrong,easeNone,easeOut,easeOutStrong,elasticBoth,elasticIn,elasticOut" value="easeBothStrong" />
+			<setting configurable="true" key="transition-duration" type="select" options="0.1,0.2,0.5,0.8,1,1.2,1.5,1.8,2" value="0.5" />
+			<setting configurable="true" key="css-transition-effect" type="select" options="yes,no" value="yes" />
+		</settings>
+
+		<color-scheme id="classic" name="Classic">
+			<default-cs>true</default-cs>
+			<css-class>classic</css-class>
+			<color-scheme-images-path>${images-path}/color_schemes/classic</color-scheme-images-path>
+	 	</color-scheme>
+
+		<color-scheme id="classic-radial" name="Classic radial">
+			<css-class>classic-radial</css-class>
+			<color-scheme-images-path>${images-path}/color_schemes/classic-radial</color-scheme-images-path>
+	 	</color-scheme>
+
+		<color-scheme id="dark" name="Dark">
+			<css-class>dark</css-class>
+			<color-scheme-images-path>${images-path}/color_schemes/dark</color-scheme-images-path>
+	 	</color-scheme>
+
+	 	<color-scheme id="dark-radial" name="Dark radial">
+			<css-class>dark-radial</css-class>
+			<color-scheme-images-path>${images-path}/color_schemes/dark-radial</color-scheme-images-path>
+	 	</color-scheme>
+	</theme>
+</look-and-feel>
+
+

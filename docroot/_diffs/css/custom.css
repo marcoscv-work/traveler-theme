@@ -1,0 +1,596 @@
+@import "compass";
+@import "compass/css3/user-interface";
+@import "mixins";
+
+/* If you want to use the bubbles dockbar controls, keep this @import: */
+
+@import url(dockbar-bubbles.css);
+
+/* Mini-framework to provide animate css3 effects, based on Animate.css (only effects in) and new custom effects */
+
+@import url(animate.css);
+
+/* Fonts */
+
+@import url(fonts.css);
+
+/* Color schemes */
+
+@import url(color_schemes.css);
+
+/* Vars */
+
+$MenuBackColor: #0A69C0;
+
+.aui {
+	height: 100%;
+	max-width: 100%;
+
+	/* loading */
+
+	.loading {
+		background: url(@theme_image_path@/progress_bar/loading_animation.gif) no-repeat center center #FFF;
+		height: 100%;
+		position: fixed;
+		text-align: center;
+		width: 100%;
+		z-index: 9999;
+	}
+
+	/* ---------- Images bg-fixed ---------- */
+
+	.img-bg-fixed {
+		background-attachment: fixed;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		&.bg-right {
+			background-position: right;
+		}
+
+		&.bg-left {
+			background-position: left;
+		}
+
+		&.bg-top {
+			background-position: top;
+		}
+
+		&.bg-bottom {
+			background-position: bottom;
+		}
+	}
+
+	&.ie8 .img-bg-fixed {
+		background-attachment: inherit;
+		background-repeat: repeat;
+	}
+
+	/* Floats on presentation mode */
+
+	.controls-hidden, .controls-visible.signed-out {
+		overflow: hidden;
+
+		.portlet-boundary.floatleft {
+			float: left;
+			overflow: auto;
+			position: relative;
+		}
+
+		/* Arrows */
+
+		.scroll-arrow.arrow-right, .scroll-arrow.arrow-left {
+			background: url(@theme_image_path@/arrows/left.png) no-repeat center center;
+			color: #CCC;
+			display: block;
+			height: 25%;
+			position: fixed;
+			right: 0;
+			text-align: center;
+			top: 35%;
+			width: 128px;
+			z-index: 349;
+
+			@include opacity(0);
+			@include transition(all 0.3s ease-in-out);
+
+			&:hover {
+				@include opacity(0.7);
+				@include transition(all 0.3s ease-in-out);
+			}
+
+			&.hide-arrow {
+				right: -25%;
+
+				@include transition(all 0.3s ease-in-out);
+			}
+		}
+
+		.scroll-arrow.arrow-right {
+			background: url(@theme_image_path@/arrows/right.png) no-repeat center center;
+			left: 0;
+			right: inherit;
+
+			&.hide-arrow {
+				left: -25%;
+			}
+		}
+
+		/* Effects */
+
+		&.css-effect {
+			.portlet-boundary.floatleft {
+				.portlet, .portlet-body {
+					transform: rotate(5deg) scale(0.60) skew(5deg) translate(10px);
+
+					@include opacity(0.5);
+					@include transition(all 0.3s ease-in-out);
+				}
+			}
+
+			.portlet-boundary.floatleft.POV_on {
+				.portlet, .portlet-body {
+					transform: rotate(0) scale(1) skew(0) translate(0) rotateY(0deg);
+
+					@include opacity(1);
+					@include transition(all 0.3s ease-in-out);
+				}
+			}
+
+			.portlet-boundary.floatleft.POV_on.POV_off {
+				.portlet, .portlet-body {
+					transform: rotate(-5deg) scale(0.60) skew(-5deg) translate(-10px);
+
+					@include opacity(0.5);
+					@include transition(all 0.3s ease-in-out);
+				}
+			}
+		}
+	}
+
+	/* Circles Slides */
+
+	.circles {
+		bottom: -50px;
+		padding: 30px 0 25px;
+		position: fixed;
+		text-align: center;
+		width: 100%;
+		z-index: 299;
+
+		@include transition(all 0.5s ease-in-out);
+
+		&:hover {
+			bottom: -20px;
+
+			@include transition(all 0.2s ease-in-out);
+		}
+
+		.center {
+			display: inline-block;
+		}
+
+		.scroll-arrow.circle {
+			background: #FFF;
+			border: 2px solid #444;
+			color: #000;
+			display: inline-block;
+			float: right;
+			font-size: 8px;
+			height: 10px;
+			line-height: 10px;
+			margin: 2px;
+			text-decoration: initial;
+			width: 15px;
+
+			@include opacity(0.5);
+			@include transition(all 0.4s ease-in-out);
+
+			span {
+				@include opacity(0);
+				@include transition(all 0.2s ease-in-out);
+			}
+
+			&.rotate-left {
+				@include transform(rotate(10deg));
+			}
+
+			&.rotate-right {
+				@include transform(rotate(-10deg));
+			}
+
+			&:hover, &.selected {
+				height: 12px;
+				margin-top: 0;
+
+				@include opacity(1);
+				@include transform(rotate(0));
+				@include transition(all 0.1s ease-in-out);
+
+				span {
+					@include opacity(1);
+					@include transition(all 0.1s ease-in-out);
+				}
+			}
+		}
+	}
+
+	/* Porcent bar progress */
+
+	.porcentBar {
+		background: #000;
+		bottom: 0;
+		height: 6px;
+		left: 0;
+		position: fixed;
+		width: 1px;
+
+		@include opacity(0.6);
+		@include transition(all 0.4s ease-in-out);
+	}
+
+	/* Edidion mode in vertical */
+
+	.signed-in.controls-visible {
+		#content {
+			width: 100% !important;
+
+			&:before {
+				content: "Edit mode: In this mode you can edit the content and the order or portlet properties";
+				display: block;
+				padding: 20px;
+				text-align: center;
+			}
+		}
+
+		.portlet-boundary {
+			height: auto !important;
+			width: 100% !important;
+			position: relative;
+		}
+
+		.scroll-arrow.arrow-right, .scroll-arrow.arrow-left, .circles, .porcentBar {
+			display: none;
+		}
+	}
+
+	/* If theme setting controls-always-visible is true */
+
+	.controls-always-visible {
+		&.controls-hidden, &.controls-visible.signed-out {
+			.scroll-arrow.arrow-right, .scroll-arrow.arrow-left {
+				@include opacity(0.4);
+
+				&:hover {
+					@include opacity(0.7);
+				}
+			}
+		}
+
+		.circles {
+			bottom: -20px;
+		}
+	}
+
+	/* Icon fullscreen */
+
+	.dockbar-split .dockbar .navbar-inner .nav-add-controls>li>.full-screen {
+		background: #CD5C5C;
+
+		&:hover {
+			background: #B14747;
+		}
+	}
+
+	.controls-visible.signed-out.dockbar-split {
+		.dockbar .navbar-inner .nav-add-controls>li>.full-screen {
+			display: none;
+		}
+	}
+
+	.ie .dockbar-split .dockbar .navbar-inner .nav-add-controls>li>.full-screen {
+		display: none;
+	}
+
+	/* dockbar-split auto-hide */
+
+	.dockbar-split .dockbar.navbar-static-top .collapse .nav-account-controls {
+		left: inherit;
+		right: 0;
+
+		@include opacity(0);
+
+		.admin-links, .my-sites, .dockbar-user-notifications, .user-avatar .user-full-name {
+			display: none;
+		}
+
+		&:hover {
+			@include opacity(1);
+
+			.admin-links, .my-sites, .dockbar-user-notifications {
+				display: list-item;
+			}
+
+			.user-avatar .user-full-name {
+				display: inline;
+			}
+		}
+	}
+
+	.signed-in.dockbar-split .dockbar .navbar-inner .nav-add-controls {
+		left: -55px;
+		top: 0;
+
+		@include transition(all 0.3s ease-in-out);
+
+		&:hover {
+			left: 0;
+
+			@include transition(all 0.2s ease-in-out);
+		}
+	}
+
+	/* General styles */
+
+	body {
+		height: 100%;
+	}
+
+	.pre-animated {
+		opacity: 0;
+	}
+
+	.cover {
+		background-size: cover;
+	}
+
+	.fixed {
+		background-attachment: fixed;
+	}
+
+	.fullHeight {
+		position: relative;
+
+		@include opacity(0);
+
+		&.done {
+			@include opacity(1);
+		}
+	}
+
+	.fullCenter {
+		position: absolute;
+		z-index: 1;
+	}
+
+	#wrapper {
+		padding: 0;
+		height: 100%;
+
+		#banner {
+			position: fixed;
+			top: 0;
+			right: 10px;
+			z-index: 301;
+		}
+
+		#content {
+			width: 100%;
+			min-height: 100%;
+
+			#main-content {
+				min-height: 100%;
+			}
+
+			.columns-max {
+				max-width: 1170px;
+				margin: 0 auto;
+			}
+
+			.portlet-boundary {
+				.portlet-title {
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+
+	/* Lateral navigation themelet */
+
+	#navigation {
+		@include transform(scale(0.1));
+		@include transition(all 0.6s ease-in-out);
+		background: $MenuBackColor;
+		bottom: 0;
+		position: fixed;
+		right: -100%;
+		top: 0;
+		width: 180px;
+		padding: 20px 30px;
+		color: #FFF;
+		overflow: auto;
+		z-index: 401;
+
+		ul {
+			list-style: none;
+			margin: 0;
+
+			.child-menu {
+				margin-left: 20px;
+				font-size: 85%;
+			}
+		}
+
+		a {
+			color: #FFF;
+			font-size: 110%;
+			padding: 5px 2px;
+			display: block;
+
+			&:hover {
+				text-decoration: inherit;
+				color: #EEE;
+			}
+		}
+
+		.logo {
+			padding-bottom: 25px;
+			text-align: center;
+		}
+	}
+
+	.navigation-left {
+		#navigation {
+			left: -100%;
+			right: inherit;
+		}
+	}
+
+	.site-title {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0;
+	}
+
+	.navigation-menu {
+		position: relative;
+		display: inline-block;
+		height: 30px;
+		width: 40px;
+		margin: 20px 15px 15px;
+		cursor: pointer;
+		vertical-align: middle;
+
+		.line1, .line2, .line3 {
+			@include box-shadow(0px 0px 2px 0px rgba(0, 0, 0, 0.85));
+			position: absolute;
+			width: 100%;
+			height: 6px;
+			background: #FFF;
+			top: 0;
+		}
+
+		.line2 {
+			top: 12px;
+		}
+
+		.line3 {
+			top: 24px;
+		}
+	}
+
+	hr {
+		opacity: 0.5;
+	}
+
+	#breadcrumbs ul {
+		padding: 0;
+		font-size: 60%;
+		background-color: transparent;
+		margin-bottom: 15px;
+
+		a {
+			display: inline;
+			@include box-shadow(none);
+		}
+	}
+
+	body.opened {
+		overflow: hidden;
+
+		#navigation {
+			@include transform(scale(1));
+			@include translate3d(0, 0, 0, 0);
+			right: 0;
+		}
+
+		.navigation-menu {
+			.line1, .line2, .line3 {
+				@include transition(all 0.2s ease);
+				@include transition-delay(0.4s);
+				@include translate3d(0, 0, 0, 0);
+				transform: rotate(45deg);
+				top: 12px;
+			}
+
+			.line2 {
+				transform: rotate(-225deg);
+				top: 12px;
+			}
+
+			.line3 {
+				@include box-shadow(none);
+				transform: rotate(225deg);
+				top: 12px;
+			}
+		}
+
+		.back-nav {
+			@include transition(all 0.5s ease);
+			background: rgba(0, 0, 0, 0.2);
+			bottom: 0;
+			left: 0;
+			position: fixed;
+			right: 0;
+			top: 0;
+			z-index: 300;
+		}
+
+		&.navigation-left {
+			@include respond-to(desktop) {
+				border-right: 0;
+			}
+
+			#navigation {
+				left: 0;
+				right: inherit;
+			}
+		}
+
+		#wrapper #banner {
+			@include transition(all 0.5s ease);
+			right: 240px;
+		}
+	}
+
+	.dockbar-split {
+		#wrapper {
+			padding: 4em 5em 0;
+		}
+	}
+
+	#_145_navSiteNavigationNavbarBtn {
+		display: none;
+	}
+
+	@include respond-to(phone, tablet) {
+		#navigation {
+			display: block;
+		}
+	}
+
+	/* Font setting */
+
+	.league-gothic {
+		#content {
+			h1, h2, h3, h4, h5 {
+				font-family: 'League Gothic','Helvetica Neue',Helvetica,Arial,sans-serif;
+				font-weight: normal;
+			}
+		}
+	}
+
+	.oswald {
+		#content {
+			h1, h2, h3, h4, h5 {
+				font-family: Oswald,'Helvetica Neue',Helvetica,Arial,sans-serif;
+				text-transform: uppercase;
+			}
+		}
+	}
+}
+
+/* Responsive version */
+
+@import url(custom_responsive.css);
