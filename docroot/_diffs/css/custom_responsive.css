@@ -90,3 +90,9 @@
 		}
 	}
 }
+
+@include respond-to(phone) {
+	.aui .fullHeight h1 {
+		font-size: 40px !important;
+	}
+}

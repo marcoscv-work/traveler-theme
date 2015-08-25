@@ -2,7 +2,7 @@
 @import "compass/css3/user-interface";
 @import "mixins";
 
-/* If you want to use the bubbles dockbar controls, keep this @import: */
+/* If you want to use the classic blue theme controls, keep this @import: */
 
 @import url(dockbar-bubbles.css);
 
@@ -434,6 +434,10 @@ $MenuBackColor: #0A69C0;
 			}
 		}
 
+		li.selected a {
+			font-weight: bold;
+		}
+
 		.logo {
 			padding-bottom: 25px;
 			text-align: center;
@@ -589,7 +593,14 @@ $MenuBackColor: #0A69C0;
 			}
 		}
 	}
+
+	/* Responsive version */
+
+	.web-form-portlet .portlet {
+		padding: 4% 10%;
+	}
 }
+
 
 /* Responsive version */
 
