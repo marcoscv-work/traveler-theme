@@ -1,0 +1,37 @@
+#set ($showOnEvent = $showOnEvent.getData())
+#set ($contentCentered = $contentCentered.getData())
+
+#if ($showOnEvent == "screen")
+	#set ($showOnEventClass = "pre-animated")
+#else
+	#set ($showOnEventClass = "hover-animated")
+#end
+
+#if ($backgroundColor)
+    <div style="background:$backgroundColor.getData()">
+#else
+    <div>
+#end
+
+
+#if ($backgroundImage)
+    <div class="$showOnEventClass ${animationTime.getData()}" effect="${effectIn.getData()}">
+    <div class="fullHeight" style="background:url($backgroundImage.getData()) no-repeat center center; background-size:cover;">
+#else
+    <div class="$showOnEventClass ${animationTime.getData()}" effect="${effectIn.getData()}">
+    <div class="fullHeight">
+#end
+
+#if ($contentCentered == "yes")
+	    <div class="fullCenter fullWinCenter">
+#end
+
+${content.getData()}
+
+#if ($contentCentered == "yes")
+    	</div>
+#end
+
+    </div>
+    </div>
+    </div>

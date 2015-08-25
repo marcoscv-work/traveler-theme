@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="" multiple="false" name="effectIn" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+		<dynamic-element name="option5848" type="option" value="bounce">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[bounce]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5849" type="option" value="flash">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[flash]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5850" type="option" value="pulse">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[pulse]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5851" type="option" value="rubberBand">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[rubberBand]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5852" type="option" value="shake">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[shake]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5853" type="option" value="swing">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[swing]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5854" type="option" value="tada">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[tada]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5855" type="option" value="wobble">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[wobble]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5856" type="option" value="bounceIn">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[bounceIn]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5857" type="option" value="bounceInDown">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[bounceInDown]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5858" type="option" value="bounceInLeft">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[bounceInLeft]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5859" type="option" value="bounceInRight">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[bounceInRight]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5860" type="option" value="bounceInUp">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[bounceInUp]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5861" type="option" value="fadeIn">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[fadeIn]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5862" type="option" value="fadeInDown">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[fadeInDown]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5863" type="option" value="fadeInDownBig">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[fadeInDownBig]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5864" type="option" value="fadeInLeft">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[fadeInLeft]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5865" type="option" value="fadeInLeftBig">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[fadeInLeftBig]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5866" type="option" value="fadeInRight">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[fadeInRight]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5867" type="option" value="fadeInRightBig">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[fadeInRightBig]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5868" type="option" value="fadeInUp">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[fadeInUp]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5869" type="option" value="fadeInUpBig">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[fadeInUpBig]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5870" type="option" value="flip">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[flip]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5871" type="option" value="flipInX">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[flipInX]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5872" type="option" value="flipInY">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[flipInY]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5873" type="option" value="lightSpeedIn">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[lightSpeedIn]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5874" type="option" value="rotateIn">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[rotateIn]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5875" type="option" value="rotateInDownLeft">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[rotateInDownLeft]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5876" type="option" value="rotateInDownRight">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[rotateInDownRight]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5877" type="option" value="rotateInUpLeft">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[rotateInUpLeft]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5878" type="option" value="rotateInUpRight">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[rotateInUpRight]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5879" type="option" value="hinge">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[hinge]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5880" type="option" value="rollIn">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[rollIn]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5881" type="option" value="zoomIn">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[zoomIn]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5882" type="option" value="zoomInDown">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[zoomInDown]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5883" type="option" value="zoomInLeft">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[zoomInLeft]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5884" type="option" value="zoomInRight">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[zoomInRight]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5885" type="option" value="zoomInUp">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[zoomInUp]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5886" type="option" value="none">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[none]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Effect In]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[[""]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element dataType="string" indexType="" multiple="false" name="showOnEvent" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+		<dynamic-element name="option11104" type="option" value="screen">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Seen on screen]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option11105" type="option" value="hover">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Hover]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Show On event]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["screen"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element dataType="string" indexType="" multiple="false" name="animationTime" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+		<dynamic-element name="option5635" type="option" value="1s">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[1s]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option5636" type="option" value="infinite">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Infinite]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Animation Time]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["1s"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element dataType="string" indexType="" multiple="false" name="contentCentered" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+		<dynamic-element name="option14321" type="option" value="yes">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[yes]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option14322" type="option" value="no">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[no]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Content Centered]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["yes"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element dataType="document-library" fieldNamespace="ddm" indexType="" name="backgroundImage" readOnly="false" repeatable="false" required="true" showLabel="true" type="ddm-documentlibrary" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Background-Image]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element dataType="string" indexType="" name="backgroundColor" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Background-color with symbol #]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="" name="content" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Content]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>

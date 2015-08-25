@@ -1,0 +1,19 @@
+#set ($contentCentered = $contentCentered.getData())
+
+#if ($backgroundColor)
+    <div class="fullHeight" style="background:$backgroundColor.getData()">
+#else
+    <div class="fullHeight">
+#end
+
+#if ($contentCentered == "yes")
+	    <div class="fullCenter fullWinCenter">
+#end
+
+${content.getData()}
+
+#if ($contentCentered == "yes")
+    	</div>
+#end
+
+    </div>

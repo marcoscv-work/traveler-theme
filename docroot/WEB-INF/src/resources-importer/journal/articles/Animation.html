@@ -1,0 +1,105 @@
+<style type="text/css">
+	.MaCAnim {
+		color: #fff;
+		background: rgba(19,107,189,1);
+		background: -moz-linear-gradient(top, rgba(19,107,189,1) 0%, rgba(11,64,120,1) 100%);
+		background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(19,107,189,1)), color-stop(100%, rgba(11,64,120,1)));
+		background: -webkit-linear-gradient(top, rgba(19,107,189,1) 0%, rgba(11,64,120,1) 100%);
+		background: -o-linear-gradient(top, rgba(19,107,189,1) 0%, rgba(11,64,120,1) 100%);
+		background: -ms-linear-gradient(top, rgba(19,107,189,1) 0%, rgba(11,64,120,1) 100%);
+		background: linear-gradient(to bottom, rgba(19,107,189,1) 0%, rgba(11,64,120,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#136bbd', endColorstr='#0b4078', GradientType=0 );
+		overflow: hidden;
+		position: absolute;
+	}
+
+	.aui #content h1.theme-text {
+	  text-align: center;
+	  font-size: 500%;
+	  padding-top: 100px;
+	}
+
+	.containerAnim {
+		height: 800px;
+		width: 800px;
+		overflow: hidden;
+		opacity: 1;
+		margin-left: 50%;
+		left: -400px;
+		top: 40%;
+		position: absolute;
+	}
+	.frm, .frm2, .frm3, .frm4 {
+		background: url('[$FILE=Anim01.png$]') center center no-repeat;
+		position: absolute;
+		height: 800px;
+		width: 800px;
+	}
+	.frm2 {
+		background: url('[$FILE=Anim02.png$]') center center no-repeat;
+	}
+
+	.frm3 {
+		background: url('[$FILE=Anim03.png$]') center center no-repeat;
+	}
+
+	.frm4 {
+		background: url('[$FILE=Anim04.png$]') center center no-repeat;
+	}
+
+	.vel1 {
+	    -webkit-animation:spin 7s linear infinite;
+	    -moz-animation:spin 7s linear infinite;
+	    animation:spin 7s linear infinite;
+	}
+	.vel2 {
+	    -webkit-animation:spin 8s linear infinite;
+	    -moz-animation:spin 8s linear infinite;
+	    animation:spin 8s linear infinite;
+	}
+	.vel3 {
+	    -webkit-animation:spin 10s linear infinite;
+	    -moz-animation:spin 10s linear infinite;
+	    animation:spin 10s linear infinite;
+	}
+	.vel4 {
+	    -webkit-animation:spin 12s linear infinite;
+	    -moz-animation:spin 12s linear infinite;
+	    animation:spin 12s linear infinite;
+	}
+	.vel5 {
+	    -webkit-animation:spin2 12s linear infinite;
+	    -moz-animation:spin2 12s linear infinite;
+	    animation:spin2 12s linear infinite;
+	    opacity: .4;
+	    background-size: 90%;
+	}
+
+	@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+	@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+	@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+	@-moz-keyframes spin2 { 100% { -moz-transform: rotate(-360deg); } }
+	@-webkit-keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); } }
+	@keyframes spin2 { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }
+
+</style>
+
+<div class="fullHeight MaCAnim">
+	<h1 class="theme-text 1s pre-animated" effect="zoomIn">
+		Traveler theme
+	</h1>
+	<div class="row-fluid">
+		<div class="span6 offset3 text-center">
+			<p class="1s pre-animated" effect="fadeIn">use the keys to move into our travels</p>
+			<img alt="" class="1s pre-animated" effect="shake" src="[$FILE=KeyArrows.png$]">
+		</div>
+	</div>
+	<div class="containerAnim 1s pre-animated">
+		<div class="frm2 vel3"></div>
+		<div class="frm3 vel2"></div>
+		<div class="frm4 vel5"></div>
+		<div class="frm4 vel1"></div>
+		<div class="frm vel4"></div>
+	</div>
+</div>

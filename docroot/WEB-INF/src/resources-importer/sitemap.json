@@ -1,0 +1,103 @@
+{
+	"layoutTemplateId": "1_column",
+	"publicPages": [
+		{
+			"columns": [
+				[
+					"Animation.html",
+					"Slide01.xml",
+					"Slide02.xml",
+					"Slide03.xml",
+					"Slide04.xml",
+					"Slide05.xml"
+				]
+			],
+			"friendlyURL": "/home",
+			"name": "Home",
+			"title": "Home"
+		},
+		{
+			"columns": [
+				[
+					"Spain.html",
+					"Spain_Madrid.html",
+					"Spain_Bilbao.html",
+					"Spain_Sevilla.html",
+					"Spain_Barcelona.html"
+				]
+			],
+			"friendlyURL": "/spain",
+			"name": "Spain",
+			"title": "Spain"
+		},
+		{
+			"columns": [
+				[
+					"Indonesia.html",
+					"Indonesia_Java.html",
+					"Indonesia_Gili.html",
+					"Indonesia_Bali.html"
+				]
+			],
+			"friendlyURL": "/indonesia",
+			"name": "Indonesia",
+			"title": "Indonesia"
+		},
+		{
+			"columns": [
+				[
+					"USA.html",
+					"USA_NewYork.html",
+					"USA_NewYorkNight.html",
+					"USA_Niagarafalls.html",
+					"USA_Washington.html"
+				]
+			],
+			"friendlyURL": "/usa",
+			"name": "USA",
+			"title": "USA"
+		},
+		{
+			"columns": [
+				[
+					"Malaysia.html",
+					"Malaysia_Batucaves.html",
+					"Malaysia_Kualalumpur.html"
+				]
+			],
+			"friendlyURL": "/malaysia",
+			"name": "Malaysia",
+			"title": "Malaysia"
+		},
+		{
+			"columns": [
+				[
+					"Croatia.html",
+					"Croatia_Plitvice.html",
+					"Croatia_Dubrovnik.html",
+					"Croatia_Krka.html"
+				]
+			],
+			"friendlyURL": "/croatia",
+			"name": "Croatia",
+			"title": "Croatia"
+		},
+		{
+			"columns": [
+				[
+					{
+						"portletId": "1_WAR_webformportlet_INSTANCE_abcd",
+						"portletPreferences": {
+							"portletSetupShowBorders": "true",
+							"portletSetupTitle_en_US": "Configure your booking form:",
+							"portletSetupUseCustomTitle": "true"
+						}
+					}
+				]
+			],
+			"friendlyURL": "/book-a-travel",
+			"name": "Book a travel",
+			"title": "Book a travel"
+		}
+	]
+}

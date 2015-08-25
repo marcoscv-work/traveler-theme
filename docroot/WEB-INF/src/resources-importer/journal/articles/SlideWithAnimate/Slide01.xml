@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element instance-id="O4cO9c99" name="effectIn" type="option" index-type="">
+		<dynamic-content><![CDATA[fadeIn]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="O4cO9c98" name="showOnEvent" type="option" index-type="">
+		<dynamic-content><![CDATA[screen]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="O4cO9c97" name="animationTime" type="option" index-type="">
+		<dynamic-content><![CDATA[1s]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="O4cO9c96" name="contentCentered" type="option" index-type="">
+		<dynamic-content><![CDATA[yes]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="O4cO9c95" name="backgroundImage" type="document_library" index-type="">
+		<dynamic-content><![CDATA[[$FILE=Madrid_01.jpg$]]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="O4cO9c93" name="backgroundColor" type="option" index-type="">
+		<dynamic-content><![CDATA[#C4D0F1]]></dynamic-content>
+	</dynamic-element>
+
+	<dynamic-element instance-id="O4cO9c94" name="content" type="ddm-text-html" index-type="">
+		<dynamic-content><![CDATA[<div style="color:#FFF; text-shadow: 1px 0px 2px rgba(150, 150, 150, 1);" class="text-center">
+			<h1 style="font-size:50px">COME TO DISCOVER SPAIN</h1>
+			<h2>Let us show you the best places in Spain</h2>
+			<a href="spain" class="btn btn-success btn-large">Go to Spain page</a>
+		</div>]]></dynamic-content>
+	</dynamic-element>
+</root>

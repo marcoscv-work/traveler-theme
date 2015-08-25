@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="" multiple="false" name="contentCentered" readOnly="false" repeatable="false" required="false" showLabel="true" type="select" width="">
+		<dynamic-element name="option14321" type="option" value="yes">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[yes]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<dynamic-element name="option14322" type="option" value="no">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[no]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Content Centered]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[["yes"]]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element dataType="string" indexType="" name="backgroundColor" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Background-color with symbol #]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+
+	<dynamic-element dataType="html" fieldNamespace="ddm" indexType="" name="content" readOnly="false" repeatable="false" required="false" showLabel="true" type="ddm-text-html" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Content]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>
