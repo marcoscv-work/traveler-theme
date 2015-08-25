@@ -20,6 +20,9 @@
 #set ($navigationVisibility = $theme.getSetting("navigation-visibility"))
 #set ($progressBar = $theme.getSetting("progress-bar"))
 #set ($transition = $theme.getSetting("transition-effect"))
+#set ($navigationColor = $theme.getSetting("navigation-color"))
+#set ($navigationTextColor = $theme.getSetting("navigation-text-color"))
+
 
 #if ($cssTransition == "yes")
 	#set ($css_class = "${css_class} css-effect")
@@ -44,6 +47,21 @@
 #end
 
 <body class="$css_class" transition="$transition" duration="$duration" $layoutAlert>
+
+#if (($navigationColor!="") || ($navigationTextColor!=""))
+	<style>
+	#if (($navigationColor!=""))
+		.aui #navigation {
+			background: $navigationColor !important;
+		}
+	#end
+	#if (($navigationTextColor!=""))
+		.aui #navigation a, .aui #navigation span, .aui #navigation {
+			color: $navigationTextColor;
+		}
+	#end
+	</style>
+#end
 
 <span class="loading">
 </span>
