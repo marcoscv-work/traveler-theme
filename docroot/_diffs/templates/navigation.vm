@@ -62,11 +62,14 @@
 			<li role="presentation">
 				<a href="$sign_in_url" class="sign-in" rel="nofollow" role="menuitem"><small>$sign_in_text</small></a>
 			</li>
-			<li role="presentation">
-				<a href="$portalUtil.getCreateAccountURL($request, $themeDisplay)">
-					<small>#language ("register")</small>
-				</a>
-			</li>
+
+			#if ($company.isStrangers())
+				<li role="presentation">
+					<a href="$portalUtil.getCreateAccountURL($request, $themeDisplay)">
+						<small>#language ("register")</small>
+					</a>
+				</li>
+			#end
 		#end
 	</ul>
 </nav>
