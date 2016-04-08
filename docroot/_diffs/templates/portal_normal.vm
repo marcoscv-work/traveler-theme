@@ -73,14 +73,6 @@ $theme.include($body_top_include)
 <div id="wrapper">
 
 	#if ($navigationVisibility == true)
-		<header id="banner" role="banner">
-			<div class="navigation-menu toggle-menu pull-right">
-				<div class="line1"></div>
-				<div class="line2"></div>
-				<div class="line3"></div>
-			</div>
-		</header>
-
 		#if ($has_navigation || $is_signed_in)
 			#parse ("$full_templates_path/navigation.vm")
 		#end
