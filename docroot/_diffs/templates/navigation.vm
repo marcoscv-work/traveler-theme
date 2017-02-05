@@ -49,7 +49,6 @@
 		#end
 	</ul>
 	<ul>
-
 		#if ($is_signed_in)
 			#set ($main_menu_style = "style='background-image: url($user.getPortraitURL($themeDisplay)); background-size: cover; width: 25px; height: 25px; display: inline-block; vertical-align: middle; margin-right: 6px; float:left;'")
 			<hr></hr>
@@ -62,7 +61,6 @@
 			<li role="presentation">
 				<a href="$sign_in_url" class="sign-in" rel="nofollow" role="menuitem"><small>$sign_in_text</small></a>
 			</li>
-
 			#if ($company.isStrangers())
 				<li role="presentation">
 					<a href="$portalUtil.getCreateAccountURL($request, $themeDisplay)">
@@ -72,4 +70,20 @@
 			#end
 		#end
 	</ul>
+	#set ($navigation-footer-ddl-id = $theme.getSetting("navigation-footer-ddl-id"))
+	#set ($recordSetId = $getterUtil.getInteger($navigation-footer-ddl-id, 0))
+	#if ($recordSetId > 0)
+		#set ($ddlRecordLocalService = $serviceLocator.findService("com.liferay.portlet.dynamicdatalists.service.DDLRecordLocalService"))
+		#set ($records = $ddlRecordLocalService.getRecords($recordSetId))
+		<ul style="position: fixed; bottom: 5px;">
+		<hr>
+		#foreach($record in $records) 
+			#set ($fields = $record.getFields())
+			#set ($fldContent = $fields.get("content").getValue())
+			<li>
+				$fldContent
+			</li>
+		#end
+		</ul>
+	#end
 </nav>
