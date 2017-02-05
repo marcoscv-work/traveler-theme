@@ -7,12 +7,14 @@
 	</compatibility>
 	<theme id="traveler" name="traveler theme">
 		<settings>
+			<setting configurable="true" key="title-company-name" type="text" value="" />
 			<setting configurable="true" key="portlet-setup-show-borders-default" type="checkbox" value="false" />
 			<setting configurable="true" key="navigation-visibility" type="checkbox" value="true" />
+			<setting configurable="true" key="navigation-footer-ddl-id" type="text" value="0" />
 			<setting configurable="true" key="presentation-controls-always-visible" type="checkbox" value="true" />
 			<setting configurable="true" key="progress-bar" type="checkbox" value="true" />
 			<setting configurable="true" key="layout-alert" type="checkbox" value="true" />
-			<setting configurable="true" key="font" type="select" options="normal,league-gothic,oswald" value="league-gothic" />
+			<setting configurable="true" key="font" type="select" options="normal,league-gothic,oswald,suelta" value="league-gothic" />
 			<setting configurable="true" key="transition-effect" type="select" options="backBoth,backIn,backOut,bounceBoth,bounceIn,bounceOut,easeBoth,easeBothStrong,easeIn,easeInStrong,easeNone,easeOut,easeOutStrong,elasticBoth,elasticIn,elasticOut" value="easeBothStrong" />
 			<setting configurable="true" key="transition-duration" type="select" options="0.1,0.2,0.5,0.8,1,1.2,1.5,1.8,2" value="0.5" />
 			<setting configurable="true" key="css-transition-effect" type="select" options="yes,no" value="yes" />
