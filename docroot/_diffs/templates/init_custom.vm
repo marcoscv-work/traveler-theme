@@ -1,1 +1,6 @@
 #set ($css_class = "$css_class dockbar-bubbles over")
+
+#set ($title_company_name = $theme_display.getThemeSetting('title-company-name'))
+#if ($title_company_name == '')
+	$title_company_name = $company_name
+#end

@@ -5,7 +5,7 @@
 <html class="$root_css_class" dir="#language ("lang.dir")" lang="$w3c_language_id">
 
 <head>
-	<title>$the_title - $company_name</title>
+	<title>$the_title ($title_company_name)</title>
 
 	<meta content="initial-scale=1.0, width=device-width, user-scalable=no" name="viewport" />
 
@@ -38,6 +38,9 @@
 
 #if ($font == "oswald")
 	#set ($css_class = "${css_class} oswald")
+#end
+#if ($font == "suelta")
+	#set ($css_class = "${css_class} suelta")
 #end
 
 #if ($layoutAlert == true)

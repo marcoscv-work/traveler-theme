@@ -593,6 +593,15 @@ $MenuBackColor: #0A69C0;
 			}
 		}
 	}
+	
+	.suelta {
+		#content {
+			h1, h2, h3, h4, h5 {
+				font-family: Suelta,'Helvetica Neue',Helvetica,Arial,sans-serif;
+				text-weight: normal;
+			}
+		}
+	}
 
 	/* Responsive version */
 
